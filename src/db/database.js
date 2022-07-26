@@ -5,7 +5,7 @@ const pass = "andresb2028";
 const dbOnline = `mongodb+srv://${user}:${pass}@cluster0.lljuf3u.mongodb.net/test`;
 const dbLocal = "mongodb://localhost:27017/webnode";
 
-db.connect(dbLocal, {
+db.connect(dbOnline, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
