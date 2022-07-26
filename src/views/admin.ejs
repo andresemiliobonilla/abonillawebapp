@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head')%> 
+</head>
+
+<body id="homepage" class="side-content side-layout">
+    <div id="wrapper">
+
+        <!-- header begin -->
+        <header class="header-dark">
+            <div class="info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>100 Mainstreet Center, Sydney</div>
+                            <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>Saturday 10 June 2018 14:00 PM - 16:00 PM
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <a href="rsvp.html" class="btn btn-custom btn-small">I'm Attending</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo">
+                            <a href="#wrapper">
+                                <img class="logo-main" src="<%= ui.logoheader %> " alt="">
+                            </a>
+                        </div>
+                        <!-- logo close -->
+
+                        <!-- small button begin -->
+                        <span id="menu-btn"></span>
+                        <!-- small button close -->
+
+                        <!-- mainmenu begin -->
+                        <nav>
+                            <ul id="mainmenu">
+                                <li><a class="active" href="#top">Home<span></span></a></li>
+                                <li><a href="#section-about">About<span></span></a></li>
+                                <li><a href="#section-services">Services<span></span></a></li>
+                                <li><a href="#section-portfolio">Portfolio<span></span></a></li>
+                                <li><a href="#section-experiences">Experiences<span></span></a></li>
+                                <li><a href="#section-contact">Contact Us<span></span></a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <!-- mainmenu close -->
+
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+
+        <!-- content begin -->
+        <div id="content" class="no-bottom no-top">
+            <div id="top"></div>
+            <!-- section begin -->
+            <section id="section-hero-5" aria-label="section-hero" class="full-height relative no-top no-bottom text-light" data-stellar-background-ratio=".2">
+                <div class="overlay-solid">
+                    <div class="overlay-bg t80">
+                        <div class="center-y fadeScroll relative" data-scroll-speed="4">
+                            <div class="container">
+                                <h1>Dashboard Admin</h1>
+                                <div class="row">
+                                    <div class="col-md-6" style="border: 1px solid white;">
+                                        <h3>UX</h3>
+                                        <form action="/admin/ui" method="POST">
+                                            <div class="mb-3" >
+                                                <label for="exampleFormControlInput1" class="form-label">logo Header</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= ui.logoheader %>" name="logoheader">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">logo Container</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= ui.logocontain %>" name="logocontain">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Color UI</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= ui.colorui %>" name="colorui">
+                                            </div>
+                                            <button type="submit">Actualizar</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6" style="border: 1px solid white;">
+                                        <h3>About</h3>
+                                        <form action="/admin/about" method="POST">
+                                            <div class="mb-4">
+                                                <label for="exampleFormControlTextarea1" class="form-label">IMG</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= aboutMe.img %>" name="img">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Titulo Aboutme</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= aboutMe.title %>" name="title">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Texto principal</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= aboutMe.text2 %>" name="text2">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Texto segundario</label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= aboutMe.text1 %>" name="text1">
+                                            </div>
+                                            <button type="submit">Actualizar</button>
+                                        </form>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+
+            <!-- section begin -->
+            <section id="section-fun-facts" class="pt60 pb60 text-light" data-bgcolor="#202020">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6" style="border: 1px solid white;">
+                            <h3>habilidades</h3>
+                            <form action="/admin/habilidades" method="POST">
+                                <div class="mb-4">
+                                    <label for="exampleFormControlTextarea1" class="form-label">titulo</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= habilidades[0].title %>" name="titulo">
+                                    <select name="prueba" id="">
+                                        <% for(var i=0; i < habilidades.length; i++){ %> 
+                                            <option value=""><%= habilidades[i].title %> </option>
+                                        <% } %> 
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="exampleFormControlTextarea1" class="form-label">progreso</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= habilidades[0].progress %>" name="progreso">
+                                </div>
+                                <button type="submit">Actualizar</button>
+                            </form>
+                        </div>
+                        <div class="col-md-6" style="border: 1px solid white;">
+                            <h3>Servicios</h3>
+                            <form action="/admin/servicios" method="POST">
+                                <div class="mb-4">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Icono</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= aboutMe.img %>" name="icono">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Titulo</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= aboutMe.img %>" name="titulo">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="exampleFormControlTextarea1" class="form-label">Texto</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= aboutMe.img %>" name="texto">
+                                </div>
+                                <button type="submit">Actualizar</button>
+
+                            </form>
+                        </div> 
+                    </div>
+                </div>
+            </section>
+            <!-- section begin -->
+
+            <section id="section-fun-facts" class="pt60 pb60 text-light" data-bgcolor="#202020">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6" style="border: 1px solid white;">
+                            <h3>Portafolio</h3>
+                            <form action="/admin/portafolio" method="POST">
+                                <div class="mb-4">
+                                    <label for="exampleFormControlTextarea1" class="form-label">titulo</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= aboutMe.img %>" name="titulo">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="exampleFormControlTextarea1" class="form-label">progreso</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= aboutMe.img %>" name="progreso">
+                                </div>
+                                <button type="submit">Actualizar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="section-fun-facts" class="pt60 pb60 text-light" data-bgcolor="#202020">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6" style="border: 1px solid white;">
+                            <h3>Contacto</h3>
+                            <form action="/admin/contacto" method="POST">
+                                <div class="mb-4">
+                                    <label for="exampleFormControlTextarea1" class="form-label">icono</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= aboutMe.img %>" name="icono">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="exampleFormControlTextarea1" class="form-label">titulo</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= aboutMe.img %>" name="titulo">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="exampleFormControlTextarea1" class="form-label">dato</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="<%= aboutMe.img %>" name="dato">
+                                </div>
+                                <button type="submit">Actualizar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- content close -->
+
+    </div>
+    <%- include('partials/footer')%>
+</body>
+
+</html>

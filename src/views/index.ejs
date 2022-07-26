@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head')%> 
+</head>
+<body id="homepage" class="side-content side-layout">
+    <div id="wrapper">
+
+        <!-- header begin -->
+        <header class="header-dark">
+            <div class="info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>100 Mainstreet Center, Sydney</div>
+                            <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>Saturday 10 June 2018 14:00 PM - 16:00 PM
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <a href="rsvp.html" class="btn btn-custom btn-small">I'm Attending</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo">
+                            <a href="#wrapper">
+                                <img class="logo-main" src="<%= ui.logoheader %> " alt="">
+                            </a>
+                        </div>
+                        <!-- logo close -->
+
+                        <!-- small button begin -->
+                        <span id="menu-btn"></span>
+                        <!-- small button close -->
+
+                        <!-- mainmenu begin -->
+                        <nav>
+                            <ul id="mainmenu">
+                                <li><a class="active" href="#top">Home<span></span></a></li>
+                                <li><a href="#section-about">About<span></span></a></li>
+                                <li><a href="#section-services">Services<span></span></a></li>
+                                <li><a href="#section-portfolio">Portfolio<span></span></a></li>
+                                <li><a href="#section-experiences">Experiences<span></span></a></li>
+                                <li><a href="#section-contact">Contact Us<span></span></a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <!-- mainmenu close -->
+
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+
+        <!-- content begin -->
+        <div id="content" class="no-bottom no-top">
+            <div id="top"></div>
+
+            <!-- section begin -->
+            <section id="section-hero-5" aria-label="section-hero" class="full-height relative no-top no-bottom text-light" data-stellar-background-ratio=".2">
+                <!-- <div id="particles-js"></div> -->
+                <div class="overlay-solid">
+                    <div class="overlay-bg t80">
+                        <div class="center-y fadeScroll relative" data-scroll-speed="4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <div class="spacer-double"></div>
+
+                                        <!-- <img src="<%= ui.logocontain %>" alt=""> -->
+                                        <div class="spacer-double"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+
+            <!-- section begin -->
+            <!-- <section id="section-fun-facts" class="pt60 pb60 text-light" data-bgcolor="#202020">
+                <div class="container">
+                    <div class="row">
+                        <% for(var i = 0; i < numero.length; i++){%>
+                        <div class="col-md-3 wow fadeIn" data-wow-delay="0">
+                            <div class="de_count">
+                                <h3 class="timer" data-to="<%= numero[i].num1%>" data-speed="2500">0</h3>
+                                <span><%= numero[i].title%></span>
+                            </div>
+                        </div>
+                        <% } %>     
+                    </div>
+                </div>
+            </section> -->
+            <!-- section close -->
+
+            <!-- section begin -->
+            <section id="section-about" class="text-light" data-bgcolor="#252525">
+                <div class="container relative">
+                    <div class="row">
+                        <!-- <div class="col-md-6">
+                            <div class="pr20">
+                                <img src="<%= aboutMe.img%>" class="img-auto img-rounded img-responsive" alt="">
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="col-md-6">
+                            <div class="spacer-half"></div>
+                            <h5><span class="id-color">About Me</span></h5>
+                            <h2><%= aboutMe.title%></h2>
+
+                            <p> <%= aboutMe.text1%></p>
+
+                            <p> <%= aboutMe.text2%></p>
+
+                            <a href="#" class="btn btn-custom"><%= aboutMe.button%></a>
+                        </div> -->
+
+                        <div class="spacer-double"></div>
+
+                        <div class="col-md-4">
+                            <div class="skill-bar style-2">
+                                <h5><%= habilidades[0].title%></h5>
+                                <div class="de-progress">
+                                    <div class="value"></div>
+                                    <div class="progress-bar" data-value="<%= habilidades[0].progress %> ">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-bar style-2">
+                                <h5><%= habilidades[1].title%></h5>
+                                <div class="de-progress">
+                                    <div class="value"></div>
+                                    <div class="progress-bar" data-value="<%= habilidades[1].progress %>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="skill-bar style-2">
+                                <h5><%= habilidades[2].title%></h5>
+                                <div class="de-progress">
+                                    <div class="value"></div>
+                                    <div class="progress-bar" data-value="<%= habilidades[2].progress %>">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-bar style-2">
+                                <h5><%= habilidades[3].title%></h5>
+                                <div class="de-progress">
+                                    <div class="value"></div>
+                                    <div class="progress-bar" data-value="<%= habilidades[3].progress %>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="skill-bar style-2">
+                                <h5><%= habilidades[4].title%></h5>
+                                <div class="de-progress">
+                                    <div class="value"></div>
+                                    <div class="progress-bar" data-value="<%= habilidades[4].progress %>">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-bar style-2">
+                                <h5><%= habilidades[5].title%></h5>
+                                <div class="de-progress">
+                                    <div class="value"></div>
+                                    <div class="progress-bar" data-value="<%= habilidades[5].progress %>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+
+            <!-- section begin -->
+            <section id="section-services" class="no-top no-bottom text-light index-6" data-stellar-background-ratio=".2">
+                <div class="overlay-gradient">
+                    <div class="overlay-bg t80">
+                        <div class="container">
+
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <h5><span class="id-color">My Services</span></h5>
+                                    <h2>I'm Available For Hire</h2>
+                                    <div id="carousel-3" class="sequence" data-anim="fadeInUp">
+                                        <% for(var i=0; i<servicios.length; i++) {%>
+                                            <div class="feature-box col-md-4 carousel-item sq-item wow">
+                                                <div class="inner">
+                                                    <i class="<%= servicios[i].icon%>"></i>
+                                                    <div class="text">
+                                                        <h3>
+                                                            <%= servicios[i].title%>
+                                                        </h3>
+                                                        <%= servicios[i].text%>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+
+            <!-- section begin -->
+            <section id="section-portfolio" class="text-light" data-bgcolor="#202020">
+                <div class="container">
+
+                    <!-- portfolio filter begin -->
+                    <div class="row">
+
+                        <div class="col-md-12 text-center">
+                            <h5><span class="id-color">Portfolio</span></h5>
+                            <h2>I Love What I Do</h2>
+                        </div>
+
+                        <div class="col-md-12 text-center mt50">
+                            <ul id="filters">
+                                <li><a href="#" data-filter="*" class="selected">all projects</a></li>
+                                <li><a href="#" data-filter=".illustration">illustration</a></li>
+                                <li><a href="#" data-filter=".mobile">mobile</a></li>
+                                <li><a href="#" data-filter=".photography">photography</a></li>
+                                <li><a href="#" data-filter=".website">website</a></li>
+                            </ul>
+
+                            <div id="gallery" class="gallery full-gallery de-gallery pf_full_width pf_3_cols grid sequence">
+                                <!-- gallery item -->
+                                <% for(var i=0; i<portafolio.length; i++) {%>
+                                <div class="item <%= portafolio[i].item%> gallery-item">
+                                    <div class="picframe wow">
+                                        <a class="image-popup" href="<%= portafolio[i].img1%>">
+                                            <span class="overlay">
+                                                <span class="pf_text">
+                                                    <span class="project-name"> <%= portafolio[i].title%></span>
+                                                </span>
+                                            </span>
+                                            <img src=" <%= portafolio[i].img2%>" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <% } %>
+                                <!-- close gallery item -->
+                            </div>
+                        </div>
+                        <!-- portfolio filter close -->
+
+                    </div>
+
+                </div>
+
+
+            </section>
+            <!-- section close -->
+
+            <!-- section begin -->
+            <section id="section-contact" class="text-light no-top no-bottom index-6" data-stellar-background-ratio=".2">
+                <div class="overlay-gradient">
+                    <div class="overlay-bg t80">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <h5><span class="id-color">Have Question?</span></h5>
+                                    <h2>Contact Me Now</h2>
+                                </div>
+
+                                <div class="col-md-8 col-md-offset-2 wow fadeInUp">
+                                    <div class="row">
+                                        <form name="contactForm" id='contact_form' class="s2" method="post" action='email.php'>
+                                            <div class="col-md-6">
+                                                <div class="field-set">
+                                                    <input type='text' name='name' id='name' class="form-control" placeholder="Your Name">
+                                                    <div class="line-fx"></div>
+                                                </div>
+
+                                                <div class="field-set">
+                                                    <input type='text' name='email' id='email' class="form-control" placeholder="Your Email">
+                                                    <div class="line-fx"></div>
+                                                </div>
+
+                                                <div class="field-set">
+                                                    <input type='text' name='phone' id='phone' class="form-control" placeholder="Your Phone">
+                                                    <div class="line-fx"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="field-set">
+                                                    <textarea name='message' id='message' class="form-control" placeholder="Your Message"></textarea>
+                                                    <div class="line-fx"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="spacer-single"></div>
+
+                                            <div class="col-md-12 text-center">
+                                                <div id='submit'>
+                                                    <input type='submit' id='send_message' value='Submit Form' class="btn btn-custom">
+                                                </div>
+                                                <div id='mail_success' class='success'>Your message has been sent successfully.</div>
+                                                <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="spacer-double"></div>
+
+                                    <div class="row text-center wow fadeInUp">
+                                        <% for(var i=0; i<contacto.length; i++) {%>
+                                            <div class="col-md-4">
+                                                <div class="wm-1"></div>
+                                                <i class="<%= contacto[i].icon%> id-color size40 mb20"></i>
+                                                <h6 class="id-color"><%= contacto[i].title%></h6>
+                                                <h4><%= contacto[i].telefono%></h4>
+                                            </div>
+                                        <% }  %> 
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- content close -->
+
+        <!-- footer begin -->
+        <footer>
+            <div class="container text-center text-light">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="social-icons big">
+                            <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-rss fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-skype fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-dribbble fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subfooter">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            &copy; Copyright 2019 - Profession by Designesia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+
+        <a href="#" id="back-to-top"></a>
+        <div id="preloader">
+            <div class="s1">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/footer')%>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head')%> 
+</head>
+<body id="homepage" class="side-content side-layout">
+    <div id="wrapper">
+        <!-- header begin -->
+        <header class="header-dark">
+            <div class="info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="col"><span class="id-color"><i class="fa fa-map-marker"></i></span>100 Mainstreet Center, Sydney</div>
+                            <div class="col"><span class="id-color"><i class="fa fa-clock-o"></i></span>Saturday 10 June 2018 14:00 PM - 16:00 PM
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <a href="rsvp.html" class="btn btn-custom btn-small">I'm Attending</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo">
+                            <a href="#wrapper">
+                                <img class="logo-main" src="<%= ui.logoheader %> " alt="">
+                            </a>
+                        </div>
+                        <!-- logo close -->
+
+                        <!-- small button begin -->
+                        <span id="menu-btn"></span>
+                        <!-- small button close -->
+
+                        <!-- mainmenu begin -->
+                        <nav>
+                            <ul id="mainmenu">
+                                <li><a class="active" href="#top">Home<span></span></a></li>
+                                <li><a href="#section-about">About<span></span></a></li>
+                                <li><a href="#section-services">Services<span></span></a></li>
+                                <li><a href="#section-portfolio">Portfolio<span></span></a></li>
+                                <li><a href="#section-experiences">Experiences<span></span></a></li>
+                                <li><a href="#section-contact">Contact Us<span></span></a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <!-- mainmenu close -->
+
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+        <!-- content begin -->
+        <div id="content" class="no-bottom no-top">
+            <div id="top"></div>
+            <!-- section begin -->
+            <section id="section-hero-5" aria-label="section-hero" class="full-height relative no-top no-bottom text-light" data-stellar-background-ratio=".2">
+                <div class="overlay-solid">
+                    <div class="overlay-bg t80">
+                        <div class="center-y fadeScroll relative" data-scroll-speed="4">
+                            <div class="container">
+                                <h1>pagina Login</h1>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <form action="/auth/authLogin" method="POST">
+                                    <div class="mb-4">
+                                        <label for="exampleFormControlTextarea1" class="form-label">usuario</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Usuario" name="user">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="exampleFormControlTextarea1" class="form-label">contraseña</label>
+                                        <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña" name="pass">
+                                    </div>
+                                    <button type="submit">Login</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section close -->
+        </div>
+        <!-- content close -->
+    </div>
+    <%- include('partials/footer')%>
+</body>
+</html>
